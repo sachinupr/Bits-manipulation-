@@ -1,0 +1,22 @@
+
+
+// Flip all the bits of a number
+  
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n;
+    cin>>n;
+    int tb;
+    tb=log2(n)+1;  // Total bits
+    int mask;
+    mask=pow(2,tb)-1;
+    int op;
+    op=mask-n;
+    cout<<op;
+    return 0;
+}
+
