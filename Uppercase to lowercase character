@@ -1,0 +1,18 @@
+
+
+  // Upper to lower case.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    char c;
+    cin>>c;
+    char p,q;
+    p=c&'_';          // lower to upper
+    cout<<p<<endl;
+    q=c|' ';          // upper to lower
+    cout<<q;
+    return 0;
+}
