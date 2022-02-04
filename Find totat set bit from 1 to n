@@ -1,0 +1,22 @@
+
+// Total set bits from 1 to n.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n;
+    cin>>n;
+    int x=2,ans=0,N=n;
+    while(N)
+    {
+        ans+=(n/x)*(x>>1);
+        if((n&(x-1)) > ((x>>1)-1) )
+        ans+=(n&(x-1))-(x>>1)+1;
+        x<<=1;
+        N>>=1;
+    }
+    cout<<ans;
+    return 0;
+}
