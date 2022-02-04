@@ -1,0 +1,26 @@
+
+// Check, If the bits's is present in alternate pattern or not ?
+  
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n;
+    cin>>n;
+    int q,c=0;
+    q=n^(n>>1);
+    int tb;
+    tb=log2(q)+1;   
+    while(q!=0)
+    {
+        c++;
+        q=q&(q-1);
+    }
+    if(c==tb)
+    cout<<"YES";
+    else
+    cout<<"NO";
+    return 0;
+}
